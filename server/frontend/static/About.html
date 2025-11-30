@@ -1,16 +1,5 @@
 <html>
     <head>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-          crossorigin="anonymous"
-        ></script>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +8,6 @@
           rel="stylesheet"
         />
         <link rel="stylesheet" href="static/style.css" />
-        <link rel="stylesheet" href="static/bootstrap.min.css" />
         <script>
           const logout = async (e) => {
             //Include the code for logout here.
@@ -33,22 +21,22 @@
                 '<span class="homepage_links">' +
                 curr_user +
                 "</span>" +
-                '<a class="homepage_links hover:text-rose-500!" onclick="logout()" href="/">Logout</a>';
+                '<a class="homepage_links hover:text-red-500!" onclick="logout()" href="/">Logout</a>';
             } else {
               document.getElementById("loginlogout").innerHTML =
-                '<a class="homepage_links hover:text-rose-500! flex fill-white hover:fill-rose-500! items-center gap-1 p-0 m-0" href="/login"><span><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></span>Login</a>' +
-                '<a class="homepage_links hover:text-rose-500! flex fill-white hover:fill-rose-500! items-center gap-2 p-0 m-0"  href="/register"><span><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z"/></svg></span>Register</a>';
+                '<a class="homepage_links hover:text-red-500! flex fill-white hover:fill-red-500! items-center gap-1 p-0 m-0" href="/login"><span><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></span>Login</a>' +
+                '<a class="homepage_links hover:text-red-500! flex fill-white hover:fill-red-500! items-center gap-2 p-0 m-0"  href="/register"><span><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z"/></svg></span>Register</a>';
             }
           };
         </script>
       </head>
-<body class="no-underline geist antialiased subpixel-antialiased"
+<body class="no-underline geist antialiased subpixel-antialiased h-screen w-screen overflow-hidden bg-zinc-900"
 onload="checkSession()">
     <nav class="bg-black flex items-center w-full nav p-4">
         <div class="h-[35px] w-full flex items-center text-white">
           <div class="pl-4 pr-0 flex w-content h-full items-center gap-2">
             <span
-              class="w-full h-full flex items-center p-0 m-0 fill-rose-500 select-none pointer-events-none"
+              class="w-full h-full flex items-center p-0 m-0 fill-red-500 select-none pointer-events-none"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="35px"
@@ -62,7 +50,7 @@ onload="checkSession()">
             <div
               class="text-xl h-full flex items-center pointer-events-none select-none"
             >
-              <h2 class="p-0 m-0">Dealerships</h2>
+              <h2 class="p-0 m-0 text-2xl" style="font-weight: 600;">Dealerships</h2>
             </div>
           </div>
           <button
@@ -77,63 +65,66 @@ onload="checkSession()">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="text-white grow w-full h-full flex items-center justify-between p-0 m-0"
+            class="text-white grow w-full h-full flex items-center justify-between m-0"
             id="navbarText"
           >
             <ul
-              class="flex w-full h-full items-center gap-10 justify-start pr-2 m-0"
+              class="flex w-full h-full items-center gap-10 justify-start pl-12 m-0 mt-1"
             >
-              <li class="">
-                <a class="hover:text-rose-500!" aria-current="page" href="#"
+              <li class="h-full flex items-center">
+                <a class="hover:text-red-500!" aria-current="page" href="#"
                   >Home</a
                 >
               </li>
-              <li class="">
-                <a class="hover:text-rose-500!" href="/about">About Us</a>
+              <li class="h-full flex items-center">
+                <a class="hover:text-red-500!" href="/about">About Us</a>
               </li>
-              <li class="">
-                <a class="hover:text-rose-500!" href="/contact">Contact Us</a>
+              <li class="h-full flex items-center">
+                <a class="hover:text-red-500!" href="/contact">Contact Us</a>
               </li>
             </ul>
-            <span class="p-0 m-0 mr-4 flex">
+            <span class="p-0 m-0 mr-4 flex mt-1">
               <div class="flex gap-6 items-center" id="loginlogout"></div>
             </span>
           </div>
         </div>
       </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+  <!-- Main Content -->
+  <div class="flex flex-col justify-center items-center w-full pt-12 pb-8 bg-zinc-900 text-white" name="about-header">
+    <h1 class="text-5xl font-semibold">About Us</h1>
+    <p class="font-thin text-center mt-2">Welcome to Best Cars dealership, home to the best cars in North America.</p>
+    </div>
+    <!-- Cards -->
+    <div class="flex justify-center items-center w-full px-24 py-12 bg-zinc-600">
+      <div class="flex justify-center items-center w-full  gap-8 px-28">
+        <!-- Card 1 -->
+      <div class="w-1/3 flex flex-col h-full overflow-hidden rounded-xl shadow-md bg-black text-white">
+        <img class="h-full align-self-start object-cover" src="/static/images/person_1.webp" alt="James Leake">
+        <div class="flex flex-col gap-1 pb-6">
+          <p class="w-full h-[35px] font-semibold text-2xl text-center bg-red-800 flex justify-center items-center text-white p-0! m-0!">James Leake</p>
+          <p class="font-bold px-2">Sales Director</p>
+          <p class="px-2">Some text</p>
+          <p class="px-2">james.leake@bestcars.com</p>
         </div>
       </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+      <!-- Card 2 -->
+      <div class="w-1/3 flex flex-col h-full overflow-hidden rounded-xl shadow-md bg-black text-white">
+        <img class="h-full align-self-start object-cover" src="/static/images/person_2.jpg" alt=" ">
+        <div class="flex flex-col gap-1 pb-6">
+          <p class="w-full h-[35px] font-semibold text-2xl text-center bg-red-800 flex justify-center items-center text-white p-0! m-0!"">Charles Beeson</p>
+          <p class="font-bold px-2">Customer Relations</p>
+          <p class="px-2"">Some text</p>
+          <p class="px-2">charles.beeson@bestcars.comm</p>
         </div>
       </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+      <!-- Card 3 -->
+      <div class="w-1/3 flex flex-col h-full overflow-hidden rounded-xl shadow-md bg-black text-white">
+        <img class="h-full align-self-start object-cover" src="/static/images/person_3.jpg" alt=" ">
+        <div class="flex flex-col gap-1 pb-6">
+          <p class="w-full h-[35px] font-semibold text-2xl text-center bg-red-800 flex justify-center items-center text-white p-0! m-0!"">Tiara McCall</p>
+          <p class="font-bold px-2">Finance Director</p>
+          <p class="px-2">Some text</p>
+          <p class="px-2">tiara.mccall@bestcars.com</p>
         </div>
       </div>
     </div>
