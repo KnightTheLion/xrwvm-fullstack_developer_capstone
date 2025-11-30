@@ -1,29 +1,106 @@
 <html>
-<head>
-  <!-- Link the style sheet here -->
-</head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="static/style.css" />
+        <link rel="stylesheet" href="static/bootstrap.min.css" />
+        <script>
+          const logout = async (e) => {
+            //Include the code for logout here.
+          };
+    
+          let checkSession = () => {
+            let curr_user = sessionStorage.getItem("username");
+    
+            if (curr_user && curr_user !== "") {
+              document.getElementById("loginlogout").innerHTML =
+                '<span class="homepage_links">' +
+                curr_user +
+                "</span>" +
+                '<a class="homepage_links hover:text-rose-500!" onclick="logout()" href="/">Logout</a>';
+            } else {
+              document.getElementById("loginlogout").innerHTML =
+                '<a class="homepage_links hover:text-rose-500! flex fill-white hover:fill-rose-500! items-center gap-1 p-0 m-0" href="/login"><span><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></span>Login</a>' +
+                '<a class="homepage_links hover:text-rose-500! flex fill-white hover:fill-rose-500! items-center gap-2 p-0 m-0"  href="/register"><span><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z"/></svg></span>Register</a>';
+            }
+          };
+        </script>
+      </head>
+<body class="no-underline geist antialiased subpixel-antialiased"
+onload="checkSession()">
+    <nav class="bg-black flex items-center w-full nav p-4">
+        <div class="h-[35px] w-full flex items-center text-white">
+          <div class="pl-4 pr-0 flex w-content h-full items-center gap-2">
+            <span
+              class="w-full h-full flex items-center p-0 m-0 fill-rose-500 select-none pointer-events-none"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="35px"
+                viewBox="0 -960 960 960"
+                width="35px"
+              >
+                <path
+                  d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-240q60 0 117 17.5T704-252q46-46 71-104.5T800-480q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 65 24.5 124T256-252q50-33 107-50.5T480-320Zm0 80q-41 0-80 10t-74 30q35 20 74 30t80 10q41 0 80-10t74-30q-35-20-74-30t-80-10ZM280-520q17 0 28.5-11.5T320-560q0-17-11.5-28.5T280-600q-17 0-28.5 11.5T240-560q0 17 11.5 28.5T280-520Zm120-120q17 0 28.5-11.5T440-680q0-17-11.5-28.5T400-720q-17 0-28.5 11.5T360-680q0 17 11.5 28.5T400-640Zm280 120q17 0 28.5-11.5T720-560q0-17-11.5-28.5T680-600q-17 0-28.5 11.5T640-560q0 17 11.5 28.5T680-520ZM480-400q33 0 56.5-23.5T560-480q0-13-4-25.5T544-528l54-136q7-16 .5-31.5T576-718q-15-7-30.5-.5T524-696l-54 136q-30 5-50 27.5T400-480q0 33 23.5 56.5T480-400Zm0 80Zm0-206Zm0 286Z"
+                /></svg
+            ></span>
+            <div
+              class="text-xl h-full flex items-center pointer-events-none select-none"
+            >
+              <h2 class="p-0 m-0">Dealerships</h2>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler hidden"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="text-white grow w-full h-full flex items-center justify-between p-0 m-0"
+            id="navbarText"
+          >
+            <ul
+              class="flex w-full h-full items-center gap-10 justify-start pr-2 m-0"
+            >
+              <li class="">
+                <a class="hover:text-rose-500!" aria-current="page" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="">
+                <a class="hover:text-rose-500!" href="/about">About Us</a>
+              </li>
+              <li class="">
+                <a class="hover:text-rose-500!" href="/contact">Contact Us</a>
+              </li>
+            </ul>
+            <span class="p-0 m-0 mr-4 flex">
+              <div class="flex gap-6 items-center" id="loginlogout"></div>
+            </span>
+          </div>
+        </div>
+      </nav>
   
     <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
       <div class="banner" name="about-header">
@@ -63,6 +140,6 @@
     </div>
     </div>
     
-</div>
+</body>
 
 </html>

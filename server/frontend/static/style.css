@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+.geist {
+    font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.minus-the-navbar{
+    height: calc(100vh - 35px - 3rem);
+}
+
+.bold-xl {
+    font-weight: 800;
+}
+
 a {
     text-decoration: none !important;
-    color: inherit !important;
+    color: inherit;
 }
 
 a:hover{
-    color: inherit !important;
     text-decoration: none !important;
+    color: inherit;
 }
